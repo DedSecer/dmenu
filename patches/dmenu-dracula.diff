@@ -1,0 +1,27 @@
+diff --git a/config.h b/config.h
+index 62b707b..052c40c 100644
+--- a/config.h
++++ b/config.h
+@@ -10,8 +10,8 @@ static const char *fonts[] = {
+ static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+ static const char *colors[SchemeLast][2] = {
+ 	/*     fg         bg       */
+-	[SchemeNorm] = { "#bbbbbb", "#222222" },
+-	[SchemeSel] = { "#ffffff", "#37474F" },
++	[SchemeNorm] = { "#f8f8f2", "#44475a" },
++	[SchemeSel] = { "#bd93f9", "#282a36" },
+ 	[SchemeOut] = { "#000000", "#00ffff" },
+ };
+ /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
+diff --git a/dmenu_recency b/dmenu_recency
+index fe96361..59b15fc 100755
+--- a/dmenu_recency
++++ b/dmenu_recency
+@@ -2,7 +2,6 @@
+ 
+ # Originally based on code by Dieter Plaetinck.
+ # Pretty much re-written by Mina Nagy (mnzaki)
+-# Edited by Chrysostomus to create/source .dmenurc
+ 
+ 
+ TERMINAL_CMD="st -e"

@@ -2,7 +2,6 @@
 
 # Originally based on code by Dieter Plaetinck.
 # Pretty much re-written by Mina Nagy (mnzaki)
-# Edited by Chrysostomus to create/source .dmenurc
 
 
 TERMINAL_CMD="st -e"

@@ -8,6 +8,12 @@ OBJ = $(SRC:.c=.o)
 
 all: options dmenu stest
 
+ifeq ($(SHELL), sh)
+DMENU_RECENCY = dmenu_recency
+else ifeq ($(SHELL), fish)
+DMENU_RECENCY = dmenu_recency_fish
+endif
+
 options:
 	@echo dmenu build options:
 	@echo "CFLAGS   = $(CFLAGS)"
@@ -42,7 +48,7 @@ dist: clean
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f dmenu dmenu_path dmenu_run stest dmenu_recency $(DESTDIR)$(PREFIX)/bin
+	cp -f dmenu dmenu_path dmenu_run stest $(DMENU_RECENCY) $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_path
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_run

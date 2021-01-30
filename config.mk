@@ -8,6 +8,9 @@ MANPREFIX = $(PREFIX)/share/man
 X11INC = /usr/include/X11
 X11LIB = /usr/lib/X11
 
+# shell
+SHELL = sh
+
 # Xinerama, comment if you don't want it
 XINERAMALIBS  = -lXinerama
 XINERAMAFLAGS = -DXINERAMA
